@@ -1,26 +1,40 @@
 import sys
 
 sys.stdin = open("input.txt", "r")
-n = int(input())
 
-meeting = []
+n = int(input())
+body = []
 
 for i in range(n):
     a, b = map(int, input().split())
-    meeting.append((a, b))
-meeting.sort(key=lambda x: (x[1], x[0]))
-et = 0
+    body.append((a, b))
+body.sort(reverse=True)  # 첫번째 원소에 의해 내림차순 정렬
+largest = 0
 cnt = 0
-for x, y in meeting:
-    if x >= et:
-        et = y
+for x, y in body:
+    if y > largest:
+        largest = y
         cnt += 1
 print(cnt)
 
 '''
-# 회의실 배정 문제 - 그리디 알고리즘
+씨름 선수 문제 (그리디)
 
-끝나는 시간 기준으로 정렬하여 해결한다.
-시작하는 시간 기준으로 정렬하면 회의의 최대 수를 구할 수 없다.
+키, 몸무게 중 적어도 하나는 나머지 모든 지원자들보다 커야 선발됨
+
+     -> 키순으로 정렬 후
+     -> 자신보다 키가 큰 선수들보다 몸무게가 제일 무거워야 함(모두 자신보다 키가 크므로 몸무게라도 무거워야 한다)
+     -> 즉, largest 몸무게로 갱신될 때마다 cnt=1
+
+입력
+5
+172 67
+183 65
+180 70 
+170 72 
+181 60
+
+출력
+3
 
 '''
