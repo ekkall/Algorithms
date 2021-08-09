@@ -5,6 +5,7 @@ n, k = map(int, input().split())
 
 q = list(range(1, n + 1))
 dq = deque(q)
+
 while dq:
     for _ in range(k - 1):
         cur = dq.popleft()
