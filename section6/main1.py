@@ -1,5 +1,3 @@
-import sys
-
 
 def DFS(x):
     if x == 0:

@@ -2,7 +2,7 @@ def DFS(v):
     if v > 7:
         return
     else:
-        print(v, end=' ')
+        print(v, end=' ') #전위순회
         DFS(v * 2)
         DFS(v * 2 + 1)
 
