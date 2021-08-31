@@ -28,6 +28,7 @@ if __name__ == "__main__":
     path.append(1)
     DFS(1)
     print(cnt)
+
 '''
 # 경로 탐색(그래프 DFS)
 
