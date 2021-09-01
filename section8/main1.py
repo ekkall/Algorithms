@@ -10,6 +10,6 @@ print(dy[n])
 '''
 Section 8. Dynamic Programming
 
-#네트워크 선 자르기 문제
+#네트워크 선 자르기 문제(Bottom - Up)
 
 '''
