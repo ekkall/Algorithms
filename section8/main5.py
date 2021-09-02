@@ -15,6 +15,6 @@ for i in range(2, n + 1):
 print(res)
 
 '''
-#최대 부분 증가수열 알고리즘(Longest Increasing Subsequence) :LIS
+#최대 선 연결하기 (LIS 활용)
 
 '''
