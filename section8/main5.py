@@ -15,6 +15,8 @@ for i in range(2, n + 1):
 print(res)
 
 '''
-#최대 선 연결하기 (LIS 활용)
+#최대 선 연결하기 
+
+(LIS 활용)
 
 '''
