@@ -7,6 +7,7 @@ if __name__ == "__main__":
         bricks.append((a, b, c))
 
     bricks.sort(reverse=True)
+
     dy = [0] * n
     dy[0] = bricks[0][1]
     res = bricks[0][1]
