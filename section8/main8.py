@@ -1,6 +1,6 @@
 def DFS(x, y):
     if dy[x][y] > 0:
-        return dy[x][y];
+        return dy[x][y]
     if x == 0 and y == 0:
         return arr[0][0]
     else:
@@ -23,3 +23,15 @@ if __name__ == "__main__":
 # 알리바바와 40인의 도둑(Top-down)
 
 '''
+def DFS(x, y):
+    if dy[x][y] > 0:
+        return dy[x][y]
+    if x == 0 and y == 0:
+        return arr[0][0]
+    else:
+        if y == 0:
+            return DFS(x - 1, y) + arr[x][y]
+        elif x == 0:
+            return DFS(x, y - 1) + arr[x][y]
+        else:
+            return min(DFS(x - 1, y), DFS(x, y - 1)) + arr[x][y]
