@@ -19,13 +19,10 @@ if __name__ == "__main__":
     dy = [[0] * n for _ in range(n)]
     print(DFS(n - 1, n - 1))
 
-'''
-# 알리바바와 40인의 도둑(Top-down)
 
 '''
+# cut edge 하지 않은 경우
 def DFS(x, y):
-    if dy[x][y] > 0:
-        return dy[x][y]
     if x == 0 and y == 0:
         return arr[0][0]
     else:
@@ -35,3 +32,6 @@ def DFS(x, y):
             return DFS(x, y - 1) + arr[x][y]
         else:
             return min(DFS(x - 1, y), DFS(x, y - 1)) + arr[x][y]
+'''
+
+# 알리바바와 40인의 도둑(Top-down)
